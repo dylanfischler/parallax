@@ -92,8 +92,6 @@
                         // var calc = String(valUnit.val + parseInt(progress) * el.keyframes[prop]) + valUnit.unit;
                         var calc = _propChange(el.start[prop], {progress: progress, keyframes: el.keyframes[prop]});
 
-                        console.log("prop, calc", prop, calc);
-
                         $(el.el).css(prop, calc);
                     }
 
@@ -107,7 +105,7 @@
         var val, unit;
         //no understandable units
         if(!match){
-            val = parseInt(str.match(/(\d)+/g)[0]);
+            val = parseInt(str.match(/(-)?(\d)+/g)[0]);
             unit = ""; 
         }
         else {

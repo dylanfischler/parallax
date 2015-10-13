@@ -18,7 +18,10 @@
     "bower_components",
     "client/lib",
     "test",
-    "tests"
+    "tests",
+    "Gruntfile.js",
+    "package.json",
+    ".gitignore"
   ],
   "dependencies": {
     "jquery": "~2.1.4"
