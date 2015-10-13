@@ -1,7 +1,7 @@
 {
   "name": "parallaxification",
   "main": "parallax.min.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/dylanfischler/parallaxification",
   "description": "Just another Parallax Library",
   "moduleType": [],
@@ -17,6 +17,7 @@
     "node_modules",
     "bower_components",
     "client/lib",
+    "client",
     "test",
     "tests",
     "Gruntfile.js",
