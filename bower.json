@@ -1,0 +1,26 @@
+{
+  "name": "parallaxification",
+  "main": "parallax.min.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/dylanfischler/parallaxification",
+  "description": "Just another Parallax Library",
+  "moduleType": [],
+  "keywords": [
+    "parallax"
+  ],
+  "authors": [
+    "Dylan Fischler"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}

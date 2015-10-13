@@ -1,9 +1,9 @@
-# parallax
+# parallaxification
 Just another Parallax Library
 
 ## Installation
 ### Dependencies 
-Parallax uses jQuery, so you'll need to throw that in your header.
+Parallaxification uses jQuery, so you'll need to throw that in your header.
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 ``` 
