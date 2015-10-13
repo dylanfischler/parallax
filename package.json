@@ -1,0 +1,18 @@
+{
+  "name": "parallax",
+  "description": "Just another Parallax Library",
+  "readme": "README.md",
+  "version": "0.0.1",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dylanfischler/parallax"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-uglify": "^0.9.2"
+  }
+}
