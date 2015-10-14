@@ -35,7 +35,6 @@
                     start: _parseCSS(el.getAttribute(P + "-start")), 
                     end: _parseCSS(el.getAttribute(P + "-end"))
                 };
-                console.log("parObj", parObj);
                 //starting and ending props much match up TODO: check prop names, not just length
                 if(parObj.start.length == parObj.end.length){
                     parallaxObjs.push(parObj);
@@ -65,11 +64,8 @@
             for(var prop in startProps){
                 //tuple
                 if(startProps[prop].split(" ").length > 1){
-                    console.log("we have a tuple");
                     var start = _tupleHandler(startProps[prop]), end = _tupleHandler(endProps[prop]);
-                    console.log("start, end", start, end);
                     var keyframe = [Math.abs(start[0] - end[0])/parHeight, Math.abs(start[1] - end[1])/parHeight];
-                    console.log("keyframe", keyframe);
                     //set animation direction
                     if(parseInt(start[0]) > parseInt(end[0])){
                         keyframe[0] *= -1;
@@ -116,13 +112,11 @@
                         var calc;
                         if(Array.isArray(el.keyframes[prop])){
                             calc = _propChangeTuple(el.start[prop], {progress: progress, keyframes: el.keyframes[prop]});
-                            console.log("calc", calc);
                         }
                         else {
                             calc = _propChange(el.start[prop], {progress: progress, keyframes: el.keyframes[prop]});
                         }
                         
-                        console.log(prop, calc);
                         $(el.el).css(prop, calc);
                     }
 
@@ -172,7 +166,6 @@
             return String(v1) + " " + String(v2);
         });
 
-        console.log("repl", repl);
         return repl;
     };
 
