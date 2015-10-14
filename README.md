@@ -43,6 +43,6 @@ Our last step is to provide the starting and ending states of our effect. This i
 
 ##### HTML
 ```html 
-<section id="one" class="par_background" class="parallax" parallax-parent="" parallax-start="background-position: 50% 0%" parallax-end="background-position: 50% -50%"></section>
+<section id="one" class="par_background" class="parallax" parallax-parent="#one" parallax-start="background-position: 50% 0%" parallax-end="background-position: 50% -50%"></section>
 ```
 
