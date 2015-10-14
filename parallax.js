@@ -106,32 +106,29 @@
     };
 
     var _attachListeners = function(elements){
-        
+        $(window).scroll(function(){
             //TODO look at efficiency 
             for(var i in elements){
                 var el = elements[i];
-
-                $(window).scroll(function(){
-                    if(_isElementInViewport($(el.parent))){
-                        var progress = $(window).scrollTop() - $(el.parent).offset().top;
-                        for(var prop in el.start){
-                            var calc;
-                            if(Array.isArray(el.keyframes[prop])){
-                                calc = _propChangeTuple(el.start[prop], {progress: progress, keyframes: el.keyframes[prop]});
-                                console.log("calc", calc);
-                            }
-                            else {
-                                calc = _propChange(el.start[prop], {progress: progress, keyframes: el.keyframes[prop]});
-                            }
-                            
-                            console.log(prop, calc);
-                            $(el.el).css(prop, calc);
+                if(_isElementInViewport($(el.parent))){
+                    var progress = $(window).scrollTop() - $(el.parent).offset().top;
+                    for(var prop in el.start){
+                        var calc;
+                        if(Array.isArray(el.keyframes[prop])){
+                            calc = _propChangeTuple(el.start[prop], {progress: progress, keyframes: el.keyframes[prop]});
+                            console.log("calc", calc);
                         }
-
+                        else {
+                            calc = _propChange(el.start[prop], {progress: progress, keyframes: el.keyframes[prop]});
+                        }
+                        
+                        console.log(prop, calc);
+                        $(el.el).css(prop, calc);
                     }
 
-                });
+                }
             }
+         });
     };
 
     var _tupleHandler = function(str){
